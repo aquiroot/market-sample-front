@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
+	// TODO: slider dark mode
+
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-3 fixed-top">
 			<div className="container-fluid">
