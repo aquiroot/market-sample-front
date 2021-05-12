@@ -19,7 +19,7 @@ export const Products = () => {
 	return (
 		<div style={{ marginBottom: 60 }}>
 			{!products ? (
-				<h3>Cargando productos</h3>
+				<h3>Cargando productos...</h3>
 			) : (
 				<div className="row row-cols-1 row-cols-md-4 g-4">
 					{products.map((product) => (

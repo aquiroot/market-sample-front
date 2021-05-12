@@ -3,8 +3,15 @@ import React from 'react';
 export const ProductCard = ({ product, url_base }) => {
 	const { _id, nombre, descripcion, precio, imagen } = product;
 	const { url } = imagen.formats.thumbnail;
+
 	const handleAdd = () => {
-		sessionStorage.setItem('cart', _id);
+		let cart = sessionStorage.getItem('cart');
+
+		if (cart === null) {
+			sessionStorage.setItem('cart', _id);
+		} else {
+			sessionStorage.setItem('cart', `${cart},${_id}`);
+		}
 	};
 
 	return (
